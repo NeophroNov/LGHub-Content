@@ -9,7 +9,7 @@ September 2023
 
 After installing and opening G HUB, you are presented with a homepage.
 
-image::homepage.bmp[A screenshot of the homepage with features numbered left-to-right.]
+image::User Guide/homepage.bmp[A screenshot of the homepage with features numbered left-to-right.]
 
 A detailed overview of the homepage:
 
@@ -46,7 +46,7 @@ https://www.logitech.com/en-ca/promo/logi-id.html[Find out more about Logi ID].
 == Setting up DPI sensitivity [[dpi]]  
 Access the DPI settings tab by selecting the image of your mouse.
 
-image::dpisettings.bmp[A screenshot of the DPI settings, with features numbered left-to-right.]
+image::User Guide/dpisettings.bmp[A screenshot of the DPI settings, with features numbered left-to-right.]
 
 A detailed overview of the DPI settings:
 
@@ -73,7 +73,7 @@ To assign the DPI Shift speed, select a speed and press the white icon:square[] 
 == Settings assignments for each profile [[assignments]]
 Access the assignment settings tab by clicking on the image of your mouse and opening the profiles menu using the plus button icon:plus-square[].
 
-image::assignments.bmp[A screenshot of the assignments settings, with features numbered left-to-right.]
+image::User Guide/assignments.bmp[A screenshot of the assignments settings, with features numbered left-to-right.]
 
 A detailed overview of the profile settings:
 
@@ -168,7 +168,7 @@ These macros loop continuously [underline]#while# the macro key is pressed.
 "Type #" is a Repeat macro that types the pound sign after a slight delay.
 Macros like this can be useful in text editing, like in the Markdown language where the number of # signs represents a heading.
 
-image::productivity2.bmp[]
+image::User Guide/productivity2.bmp[]
 
 === Toggle  
 
@@ -185,7 +185,7 @@ This can be useful for inputting key chords, or for users with limited mobility.
 Certain code editors use shortcut combinations such as kbd:[Ctrl+K] kbd:[Ctrl+U] to format code.
 With this macro, you can avoid using both hands or stretching to reach the control key.
 
-image::productivity3.bmp[]
+image::User Guide/productivity3.bmp[]
 
 === Sequence  
 
@@ -198,7 +198,7 @@ Sequence macros combine all the other types.
 "Alt Tab and Hold" is a Sequence macro that brings up the Windows task switcher, which can otherwise be done by pressing kbd:[Alt+Tab] and holding down kbd:[Alt].
 This lets the user choose a specific window to open instead of cycling through every option.
 
-image::alttabhold.bmp[]
+image::User Guide/alttabhold.bmp[]
 
 == Backing up and restoring settings  
 
@@ -221,23 +221,23 @@ However, using this mode disables integrations and custom-made macros.
 
 - To turn on the on-board memory mode, use the associated button under your device's image.
 
-image::device_buttons.png[]
+image::User Guide/device_buttons.png[]
 
 - To configure the on-board memory mode and upload up to 5 profiles to your device, go into the device settings.
 
-image::onboardmemory_settings.png[]
+image::User Guide/onboardmemory_settings.png[]
 
 === Onboard Memory Manager
 
 The Onboard Memory Manager is a separate utility from Logitech.
 It's not a direct replacement for G HUB, but a useful tool for configuring the on-board memory of your mouse.
 
-image::onboardmemory_window.png[]
+image::User Guide/onboardmemory_window.png[]
 
 To launch the Onboard Memory Manager, get it from the https://support.logi.com/hc/en-us/articles/360059641133[official download page] and select the right Windows version.
 Then, simply launch the .exe file.
 
-image::onboardmemory_install.png[]
+image::User Guide/onboardmemory_install.png[]
 
 == Common issues
 
