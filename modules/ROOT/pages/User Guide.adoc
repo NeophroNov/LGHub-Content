@@ -1,0 +1,281 @@
+// suppress inspection "AsciiDocLinkResolve" for whole file
+= Logitech G HUB: Practical User Guide
+Mikhail Nov <mikhail.nov2@gmail.com>
+September 2023
+:experimental: Yes
+:icons: font
+
+== Getting started
+
+After installing and opening G HUB, you are presented with a homepage.
+
+image::homepage.bmp[A screenshot of the homepage with features numbered left-to-right.]
+
+A detailed overview of the homepage:
+
+1. Navigation pane.
+This pane allows you to open a list of apps/games, change the G HUB settings, and open community resources.
+
+2. Your Gear.
+All your Logitech G devices are shown here.
+If you have several devices connected, use the arrows on each side to scroll.
++
+TIP: Click on the image of a device to change its <<dpi, DPI>>, <<assignments, assignments>>, or lighting.
++
+3. On-board Memory Mode.
+You can store settings directly on your device without connecting to G HUB.
+Note that this limits some macro and integration assignments.
+
+4. Device Settings.
+Here, you can set up a Bluetooth connection or make changes to each of [underline]#five# On-board Memory slots.
+
+5. Profiles.
+G HUB automatically creates a profile for each game/app it detects.
++
+NOTE: The lock icon:lock[] to the left of the profile name indicates that the current profile is [underline]#persistent#, meaning it will remain active regardless of what app is open.+ 
+You can set up a persistent profile in the G HUB settings.
++
+6. View buttons.
+Use these to switch the display of your Gear list.
+
+7. Logi ID button.
+Opens the login page in your web browser where you can connect your existing Logi ID or create a new one.
+https://www.logitech.com/en-ca/promo/logi-id.html[Find out more about Logi ID].
+
+
+== Setting up DPI sensitivity [[dpi]]  
+Access the DPI settings tab by selecting the image of your mouse.
+
+image::User Guide\dpisettings.bmp[A screenshot of the DPI settings, with features numbered left-to-right.]
+
+A detailed overview of the DPI settings:
+
+1. A list of DPI speeds.
+Your current speed is underlined.
+
+2. Persistent profile button.
+Select the lock icon:unlock-alt[] to enable DPI persistent profile, meaning the DPI settings will not change upon switching apps.
+If you wish to have different DPI settings for each game/app, enable per-profile DPI by selecting the lock icon icon:lock[] again.
++
+3. The DPI slider.
+You can assign up to five DPI speeds by clicking anywhere on the slider.
+To delete a speed, drag the respective circle icon:circle[] off the slider.
++
+*NOTE*: The [blue]#*DPI Shift*# speed is represented by the icon:square[] diamond icon.
+You can assign a button to activate DPI Shift by selecting the plus icon icon:plus-square[] on the left pane.
++
+// There is no rhombus/diamond icon in FontAwesome v4. If it needs to be included for publishing, the other icons must be downloaded and converted to :icons:image mode.
+
+4. The DPI Shift assignment button.
+To assign the DPI Shift speed, select a speed and press the white icon:square[] diamond button on top.
+
+
+== Settings assignments for each profile [[assignments]]
+Access the assignment settings tab by clicking on the image of your mouse and opening the profiles menu using the plus button icon:plus-square[].
+
+image::User Guide\assignments.bmp[A screenshot of the assignments settings, with features numbered left-to-right.]
+
+A detailed overview of the profile settings:
+
+1. List of available assignments.
+For each tab, use the search bar icon:search[] to find an assignment.
+The tabs are:
+... Commands.
+Editing, navigation, and OS-specific shortcuts.
+... Keys.
+Single buttons that can be found on a typical keyboard.
+... Actions.
+Commands for supported third party integrations: Overwolf, Streamlabs Desktop, Discord, and OBS.
+... Macros.
+Customizable sequences of events or commands.
+- See <<macros, "Making your own macros">> to learn how to configure macros and some useful suggestions.
+... System.
+Mouse commands are found here, as well as media, editing, and audio hotkeys.
+Includes the option to launch an application.
+
+2. Persistent profile button.
+Select the lock icon icon:unlock-alt[] to toggle the persistent profile, meaning the assignments will not change upon switching apps.
+To switch between different assignments for each game/app, enable per-profile DPI by selecting the lock icon icon:lock[] again.
+
+3. The assignments view.
+To add an assignment, drag it from the left pane onto the desired button.
+To delete an assignment or revert back to default, select the circle icon icon:circle[] next to a button.
+
+4. View buttons.
+If your mouse has side buttons, select *View 2* to display the side view.
+
+5. G-Shift switch.
+[blue]#*G-Shift*# is used to create a second set of assignments for a profile, doubling the number of buttons your mouse has.
+Toggle the switch to display the G-Shift assignments.
+To use the secondary assignments, assign the G-Shift command under System>Device to a button.
+
+WARNING: If you remap the left mouse button to anything other than *Primary Click*, you will be unable to left-click.
+To revert this assignment, use a mousepad, connect a different mouse, or follow <<switchLeftClick, these instructions to switch your primary and secondary buttons.>>
+
+== Making your own macros [[macros]] 
+
+Within the macro editor, there are three types of basic macros:
+
+- No repeat
+- Repeat while holding
+- Toggle
+
+As well as the Sequence macros, which combine the three basic types.
+
+=== How to use the macro editor
+
+- To add an action, such as a keystroke or a text string, select the plus button icon:plus-square[].
+To cancel, select the X button icon:window-close[]. +
+- To delete an action, select it and press kbd:[Backspace] or kbd:[Delete]. +
+- To select multiple actions, use kbd:[Shift+Click] or press kbd:[Ctrl+A] to select all.
+
+Inside the editor, you have options to rename the macro and change its color.
+
+The options to use a standard 50ms delay, and to display the release of a key are enabled by default:
+
+- To record the timing of the keys as you press them, or to use custom delays, clear the *Use standard delays* checkbox.
+1 second = 1000 ms.
+- To display only when a key is pressed (but not released), clear the *Show key down/key up* checkbox.
+This is useful when programming shortcuts such as kbd:[Ctrl+C].
+
+image::User Guide/macroeditor.bmp[]
+
+=== No repeat
+
+These macros play [underline]#once# after the macro key is pressed.
+
+- For productivity, this type of macro are best used for in-app shortcuts.
+- For gaming, they can be used to assign keys or combinations of keys that require precise timings.
+
+.Example No Repeat macro: 
+[caption=""]
+[example]
+Example: "Italicize" is a simple No Repeat macro that plays kbd:[Ctrl+I], the shortcut to make text italic in a text editor.
+This lets the user highlight certain words without taking a hand off the mouse.
+
+image::User Guide/productivity.bmp[]
+
+=== Repeat while holding
+
+These macros loop continuously [underline]#while# the macro key is pressed.
+
+- For productivity, they can be useful for inputting text or repeating actions.
+- For gaming, Repeat macros can be useful when button-mashing is required, or during quick-time events.
+
+.Example Repeat macro: 
+[caption=""]
+[example]
+"Type #" is a Repeat macro that types the pound sign after a slight delay.
+Macros like this can be useful in text editing, like in the Markdown language where the number of # signs represents a heading.
+
+image::User Guide\productivity2.bmp[]
+
+=== Toggle  
+
+These macros loop continuously until the macro key is [underline]#pressed again#.
+
+- For productivity, Toggle macros can be used to hold down keys like kbd:[Ctrl].
+This can be useful for inputting key chords, or for users with limited mobility.
+- For gaming, they can be useful to use an ability right after a cooldown, or holding down keys like kbd:[Shift] for games which don't allow to toggle running.
+
+.Example Toggle macro: 
+[caption=""]
+[example]
+"Hold Ctrl" is a Toggle macro that simply holds down the kbd:[Ctrl] key until it's pressed again.
+Certain code editors use shortcut combinations such as kbd:[Ctrl+K] kbd:[Ctrl+U] to format code.
+With this macro, you can avoid using both hands or stretching to reach the control key.
+
+image::User Guide\productivity3.bmp[]
+
+=== Sequence  
+
+Sequence macros combine all the other types.
+[underline]#Three separate macros# play upon pressing the macro key, while holding it down, and upon release.
+
+.Example Sequence macro 
+[caption=""]
+[example]
+"Alt Tab and Hold" is a Sequence macro that brings up the Windows task switcher, which can otherwise be done by pressing kbd:[Alt+Tab] and holding down kbd:[Alt].
+This lets the user choose a specific window to open instead of cycling through every option.
+
+image::User Guide\alttabhold.bmp[]
+
+== Backing up and restoring settings  
+
+To manually save G Hub application settings, follow these steps:
+
+. Exit G HUB by right-clicking on it in the system tray and selecting *Quit*.
++
+image::systemtray.png[]
++
+. Navigate to `C:\Users\<user_name>\AppData\Local`
++
+. Copy the `LGHUB` folder to a safe place on your computer, like the Desktop.
+
+. When installing G HUB again, or on a new device, replace the existing `LGHUB` folder in `AppData\Local` with the backed up folder.
+
+== On-board memory mode 
+
+The on-board memory mode lets you store a profile's settings directly on the device.
+However, using this mode disables integrations and custom-made macros.
+
+- To turn on the on-board memory mode, use the associated button under your device's image.
+
+image::User Guide\device_buttons.png[]
+
+- To configure the on-board memory mode and upload up to 5 profiles to your device, go into the device settings.
+
+image::User Guide\onboardmemory_settings.png[]
+
+=== Onboard Memory Manager
+
+The Onboard Memory Manager is a separate utility from Logitech.
+It's not a direct replacement for G HUB, but a useful tool for configuring the on-board memory of your mouse.
+
+image::User Guide\onboardmemory_window.png[]
+
+To launch the Onboard Memory Manager, get it from the https://support.logi.com/hc/en-us/articles/360059641133[official download page] and select the right Windows version.
+Then, simply launch the .exe file.
+
+image::User Guide\onboardmemory_install.png[]
+
+== Common issues
+
+=== Accidentally un-assigned left click button [[switchLeftClick]]
+
+If you've assigned another function to the left mouse button without assigning "Primary Click" elsewhere, you will be unable to use G HUB to revert this change.
+
+==== If your keyboard has a numeric pad:
+
+Press kbd:[Alt+Left Shift+Num Lock] to activate MouseKeys and control the pointer with your Num pad:
+
+- The outside number keys are used to move the mouse cursor.
+
+- The kbd:[5] number key is used as the primary click button.
+
+- The kbd:[Insert]/kbd:[0] key is used to hold down primary click.
+
+- The plus key kbd:[+] is used to double-click.
+
+- The Delete key kbd:[Del] is used to release the mouse.
+
+==== If your keyboard doesn't have a numeric pad:
+
+Use the keyboard to switch the primary and secondary mouse buttons: 
+
+TIP: Use kbd:[Tab] and the arrow keys icon:arrows[] to navigate, kbd:[Enter] to open a window, and kbd:[Spacebar] to select a checkbox.
+Use kbd:[Alt+Tab] to re-open this guide as you're following the instructions.
+
+. Open Mouse Properties by pressing the Windows key icon:windows[], then typing in "Control Panel" and pressing kbd:[Enter].
+In the search box, type "mouse", and select "Change mouse settings".
+
+. Select the Buttons tab, and then navigate to the `Switch primary and secondary buttons` checkbox.
+Press kbd:[Spacebar] to select the checkbox.
+
+. Select `Apply`, then `Ok`.
+
+You have now swapped the primary click function to the right mouse button, and can use it to revert your changes in G HUB.
+
+
+
+

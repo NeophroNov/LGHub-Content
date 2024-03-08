@@ -1,0 +1,22 @@
+= Logitech G HUB - Docs
+
+== Introduction
+
+This a self-made User Guide and Troubleshooting Guide to the Logitech G HUB software.
+
+The User Guide shows a new user how to navigate the software and set up profiles for each game/app, and provides suggestions for creating useful custom macros.
+The Troubleshooting Guide tells users how to solve a few common issues, and answers questions frequently asked online.
+
+It was created to:
+
+- Fill in a gap in the manufacturer's documentation
+- Update the user guide to the current version of G HUB.
+- Provide solutions for common problems described online.
+- Create an effective portfolio piece for an aspiring technical writer.
+
+Thank you for viewing this guide.
+
+
+TIP: This user guide is intended for Logitech G [underline]#mouse# users.
+The particular model used while making the guide is Logitech G604.
+Although some instructions apply to other devices, the macro and assignment suggestions were written with a mouse in mind.

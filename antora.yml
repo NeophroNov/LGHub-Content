@@ -1,0 +1,5 @@
+name: docs
+title: Test Document
+version: 1
+nav:
+  - modules/component/nav.adoc

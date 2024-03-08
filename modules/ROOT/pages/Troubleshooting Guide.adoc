@@ -1,0 +1,129 @@
+= Logitech G HUB: Troubleshooting Guide
+Mikhail Nov <mikhail.nov2@gmail.com>
+September 2023
+:experimental: Yes
+:icons: font
+
+
+
+== Installation [[install]]
+These are instructions to install G HUB on a Windows computer:
+
+. Download the installer from the https://www.logitechg.com/en-us/innovation/g-HUB.html[official website] 
+. If prompted `"Do you want to allow this app to make changes to your device?"`, select *Yes*.
+. Select *Install* to start the download.
+After the progress bar fills up, select *Install and Launch*.
+. When setup is complete, close the patch notes  icon:window-close[], or select *Got it* at the bottom.
+
+You have successfully installed G HUB.
+
+== Common issues
+=== Stuck on the loading animation
+Sometimes G HUB will loop an animation of the G logo without proceeding to the starting screen.
+Try the following:
+
+. Exit G HUB by right-clicking on it in the system tray and selecting *Quit*.
++
+image::systemtray.png[]
++
+. Open the Task Manager kbd:[Ctrl+Alt+Del]. +
++
+You may need to select icon:angle-down[arrow down#]`More details` to display every process.
++
+. Find the LGHUB, LGHUB Agent and LGHUB Updater processes, right-click and choose *End task* on each.
+. Once those processes are ended, navigate to 'C:\Program Files\LGHUB' and run these in order:
+
+    Lghub_updater.exe
+    Lghub_agent.exe
+    Lghub.exe
+
+Make sure to run the main LGHUB process with admin privileges.
+
+If the issue persists even after completing the steps above, try <<clean_install, performing a clean installation>>.
+
+=== Installer keeps crashing
+
+On some systems running Windows 11, the G HUB installer crashes upon launch.
+Try the following:
+
+. Open the file explorer kbd:[icon:windows[\]+E].
+
+. Learn which type of operating system you're on.
+
+... In the left pane, right-click on This PC.
+... Select `Properties` to open the About window.
++
+image::Troubleshooting//thispc.bmp[]
++
+... Check the System Type to find out if you're running a 64 bit or an 86 bit system.
++
+image::Troubleshooting//aboutpc.bmp[]
++
+. Download and install the latest https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170[Visual C++ Redistributable] for your respective system.
+
+. Download and install the latest version of the https://dotnet.microsoft.com/en-us/download/dotnet-framework[.NET Framework] for your respective system.
+
+. Reboot your computer.
+
+If the installer crashes even after completing these steps, follow the steps to <<upgrade, upgrade G HUB from an older version.>>
+
+=== Unable to close the patch notes
+
+Sometimes, G HUB will display a list of updates to the app without an option to proceed to the starting screen.
+Try the following: [[upgrade]]
+
+. Download an older version of G HUB by going to the https://support.logi.com/hc/en-us/articles/360025298133[official support website] and selecting "Windows 7" in the dropdown menu.
++
+image::Troubleshooting//windows7.bmp[]
++
+. Install the Windows 7 version by following the steps in the installation wizard.
+
+. After G HUB is installed, upgrade to the current Windows 10/11 version by selecting *Upgrade* when prompted.
+
+
+=== Performing a clean installation of G HUB [[clean_install]]
+
+If you wish to preserve your settings and macros, do the following:
+
+. Navigate to `C:\Users\<user name>\AppData\Local\LGHUB`
+
+. Copy the `settings.db` file and paste it somewhere else on your computer.
+The Desktop is a good place to paste, so you can easily find it later.
+
+. After performing the clean install, place the file back into `C:\Users\<user name>\AppData\Local\LGHUB`.
+
+How to perform a clean installation of G HUB:
+
+. Exit G HUB from the system tray.
+
+. Open the Task Manager kbd:[Ctrl+Alt+Del].
+
+. Find and close any LGHUB processes by using *End task* on each.
+Skip this step if LGHUB processes are not running.
+
+. Open the start menu kbd:[Ctrl+Esc].
+Search for "Add or remove programs" and open the suggested window.
+
+. Find Logitech G HUB in the list of apps and uninstall it.
+
+. Delete the related folder in each of these locations:
+
+... `C:\Program Files\LGHUB` 
+... `C:\ProgramData\LGHUB`
+... `C:\Users\<user name>\AppData\Local\LGHUB`
+... `C:\Users\<user name>\AppData\Roaming\LGHUB`
++ 
+NOTE: If you don't see the ProgramData folder, toggle "Hidden items" under the View tab.
++ 
+. Open the Registry Editor by opening the Start menu icon:windows[], typing `regedit`, and selecting *Open*.
+
+. Navigate to `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\\{521c89be-637f-4274-a840-baaf7460c2b2}`
++
+image::Troubleshooting/regedit.bmp[]
++
+. Right-click on the folder and select kbd:[Delete].
+
+. Reboot your computer.
+
+. <<install, Reinstall G HUB.>>
+
