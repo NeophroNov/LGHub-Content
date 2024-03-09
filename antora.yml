@@ -1,5 +1,4 @@
-name: docs
-title: Test Document
-version: 1
-nav:
-  - modules/component/nav.adoc
+name: LGHub
+title: LGHub
+version: '1.0'
+start_page: index.adoc

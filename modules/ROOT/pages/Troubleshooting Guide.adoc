@@ -119,7 +119,7 @@ NOTE: If you don't see the ProgramData folder, toggle "Hidden items" under the V
 
 . Navigate to `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\\{521c89be-637f-4274-a840-baaf7460c2b2}`
 +
-image::Troubleshooting/regedit.bmp[]
+image::Troubleshooting//regedit.bmp[]
 +
 . Right-click on the folder and select kbd:[Delete].
 
